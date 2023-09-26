@@ -1,0 +1,29 @@
+{
+  "name": "connectlv-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "npx ts-node support/helpers/utils/init.ts",
+    "test": "cross-env ENV=dev cucumber-js --config=config/cucumber.js || true",
+    "posttest": "npx ts-node support/helpers/utils/report.ts",
+    "test:failed": "cucumber-js -p rerun @rerun.txt"
+  },
+  "keywords": [
+    "cucumber",
+    "cucumber - TS",
+    "playwright-cucumber"
+  ],
+  "author": "Michael F",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^9.5.1",
+    "@playwright/test": "^1.38.1",
+    "@types/node": "^20.7.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.3.1",
+    "fs-extra": "^11.1.1",
+    "multiple-cucumber-html-reporter": "^3.5.0",
+    "ts-node": "^10.9.1"
+  }
+}
