@@ -5,7 +5,6 @@ import { fixture } from "../../../support/hooks/pageFixture";
 
 setDefaultTimeout(60 * 1000 * 5)
 
-
 let assert: Assert;
 let homepage: HomePage;
 
