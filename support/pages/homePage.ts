@@ -24,7 +24,6 @@ export default class HomePage {
     }
     async selectImportNetwork() {
         await fixture.page.locator(".tab-content .row:nth-of-type(1) .file-section").click();
-        // await fixture.page.pause();
     }
 
     async inputNetwork(networkNumber: string) {
