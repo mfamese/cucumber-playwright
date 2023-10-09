@@ -5,7 +5,7 @@ module.exports = {
       snippetInterface: "async-await",
     },
     paths: ["e2e/tests/features/"],
-    dryRun: false,
+    dryRun: !true,
     require: [
       "e2e/tests/steps_definitions/**/*.ts",
       "support/hooks/hooks.ts",
