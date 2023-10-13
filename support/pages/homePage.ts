@@ -34,8 +34,28 @@ export default class HomePage {
         await fixture.page.locator("#btnSearchSub").click();
     }
 
+    async errorValidation(messageType: string) {
+        await expect(fixture.page.locator("div[role='document'] span")).toHaveText(messageType)
+
+    }
+
     async loadBtn() {
         await fixture.page.locator(".flex-fill .btn-sm:nth-of-type(2)").click();
+    }
+
+    async clickRunAssesmentBtn() {
+        //Handling alert
+        // fixture.page.on('dialog', async dialog => {
+        //     expect(dialog.type()).toContain('alert')
+        //     expect(dialog.type()).toContain('Please note - some properties have been set to suggested values. Do you want to accept all of these?')
+        //     await dialog.accept();
+        // })
+        await fixture.page.locator("#runAssessment").click();
+        await fixture.page.locator(".text-nowrap").click();
+    }
+
+    async clickCalculateBtn() {
+        await fixture.page.locator(".align-items-center.btn.btn-info.btn-sm.d-flex.disabled.mr-2").click();
     }
 
 }

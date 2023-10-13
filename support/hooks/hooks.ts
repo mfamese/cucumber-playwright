@@ -1,8 +1,8 @@
 import { BeforeAll, Before, AfterAll, After, Status } from "@cucumber/cucumber";
 import { Browser, BrowserContext, } from "@playwright/test";
 import { fixture } from "./pageFixture";
-import { invokeBrowser } from "../helpers/browsers/browserManager"; 
-import { getEnv } from "../helpers/env/env"; 
+import { invokeBrowser } from "../helpers/browsers/browserManager";
+import { getEnv } from "../helpers/env/env";
 const fs = require("fs-extra");
 
 let browser: Browser;
@@ -38,6 +38,7 @@ After(async function ({ pickle, result }) {
     img = await fixture.page.screenshot({ path: `test-results/screenshots/${pickle.name}.png`, });
   }
   await fixture.page.waitForTimeout(12000)
+  // await fixture.page.pause();
   await fixture.page.close();
   await context.close();
 });
