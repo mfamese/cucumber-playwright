@@ -3,7 +3,7 @@ import HomePage from "../../../support/pages/homePage";
 import Assert from "../../../support/wrapper/assert";
 import { fixture } from "../../../support/hooks/pageFixture";
 
-setDefaultTimeout(60 * 1000 * 10)
+setDefaultTimeout(60 * 1000 * 5)
 
 let assert: Assert;
 let homepage: HomePage;

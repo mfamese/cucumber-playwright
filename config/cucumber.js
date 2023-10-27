@@ -6,6 +6,8 @@ module.exports = {
     },
     paths: ["e2e/tests/features/"],
     dryRun: !true,
+    defaultCommandTimeout: 10000,
+    execTimeout: 10000,
     require: [
       "e2e/tests/steps_definitions/**/*.ts",
       "support/hooks/hooks.ts",

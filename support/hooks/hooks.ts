@@ -37,7 +37,7 @@ After(async function ({ pickle, result }) {
   if (result?.status === Status.FAILED) {
     img = await fixture.page.screenshot({ path: `test-results/screenshots/${pickle.name}.png`, });
   }
-  await fixture.page.waitForTimeout(15000)
+  await fixture.page.waitForTimeout(20000)
   // await fixture.page.pause();
   await fixture.page.close();
   await context.close();

@@ -35,7 +35,7 @@ export default class HomePage {
     }
 
     async errorValidation(messageType: string) {
-        await expect(fixture.page.locator("div[role='document'] span")).toHaveText(messageType)
+        await expect(fixture.page.locator("div[role='document'] span")).toHaveText(messageType,)
 
     }
 
@@ -55,7 +55,7 @@ export default class HomePage {
     }
 
     async clickCalculateBtn() {
-        await fixture.page.locator(".align-items-center.btn.btn-info.btn-sm.d-flex.disabled.mr-2").click();
+        await fixture.page.locator(".navbar-nav > button:nth-of-type(1) > svg[role='img'] > path").click();
     }
 
 }
