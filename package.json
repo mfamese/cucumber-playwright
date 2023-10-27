@@ -1,7 +1,7 @@
 {
   "name": "connectlv-ui",
   "version": "1.0.0",
-  "description": "",
+  "description": "CLV",
   "main": "index.js",
   "scripts": {
     "pretest": "npx ts-node support/helpers/utils/init.ts",

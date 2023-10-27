@@ -35,7 +35,7 @@ export default class HomePage {
     }
 
     async errorValidation(messageType: string) {
-        await expect(fixture.page.locator("div[role='document'] span")).toHaveText(messageType,)
+        await expect(fixture.page.locator(".modal-body span")).toHaveText(messageType,)
 
     }
 

@@ -25,10 +25,13 @@ module.exports = {
     formatOptions: {
       snippetInterface: "async-await",
     },
-    dryRun: false,
+    paths: ["e2e/tests/features/"],
+    dryRun: !true,
+    defaultCommandTimeout: 10000,
+    execTimeout: 10000,
     require: [
       "e2e/tests/steps_definitions/**/*.ts",
-      "e2e/tests/support/hooks/hooks.ts",
+      "support/hooks/hooks.ts",
     ],
     requireModule: ["ts-node/register"],
     format: [
@@ -37,6 +40,6 @@ module.exports = {
       "json:test-results/cucumber-report.json",
       "rerun:@rerun.txt",
     ],
-    parallel: 3,
+    parallel: 5,
   },
 };
